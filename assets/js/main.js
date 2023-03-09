@@ -40,10 +40,12 @@ document.getElementById('btn_upload').addEventListener('click', function() {
 
 
 /* btn reset */
-    reset.addEventListener('click', function() {
+document.getElementById('reset').addEventListener('click', function() {
         document.getElementById("name").value = "";
         document.getElementById("age").value = "";
         document.getElementById("km").value = "";
+        document.getElementById("passengers").innerHTML = "";
+        document.getElementById("total_price").innerHTML = "";
 })
   
   
