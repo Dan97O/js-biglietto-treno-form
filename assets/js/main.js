@@ -1,8 +1,5 @@
 
-
-
-
-
+/* btn upload */
 document.getElementById('btn_upload').addEventListener('click', function() {
      
     // numero km da percorrere
@@ -30,74 +27,24 @@ document.getElementById('btn_upload').addEventListener('click', function() {
         const priceTicketYoung = (priceTicket * 0.2).toFixed(2);
         const finalprice = (priceTicket - priceTicketYoung).toFixed(2); 
         console.log(finalprice);
-        document.getElementById("total_price").innerHTML = (`il tuo prezzo Giovani é ${finalprice} €`);
+        document.getElementById("total_price").innerHTML = (`Il tuo prezzo Giovani é ${finalprice} €`);
     } else if(userAge > 65){
         const priceTicketOld = (priceTicket * 0.4).toFixed(2);
         const finalprice = (priceTicket - priceTicketOld).toFixed(2); 
         console.log(priceTicketOld);
-        document.getElementById("total_price").innerHTML = (`il tuo prezzo Anziani é ${finalprice} €`);
+        document.getElementById("total_price").innerHTML = (`Il tuo prezzo Anziani é ${finalprice} €`);
     } else{
-        document.getElementById("total_price").innerHTML = (`il tuo prezzo Normale é ${priceTicket} €`);
+        document.getElementById("total_price").innerHTML = (`Il tuo prezzo Normale é ${priceTicket} €`);
     }  
-  })
+})
 
-  reset.addEventListener('click', function() {
-    document.getElementById("name").value = "";
-    document.getElementById("age").value = "";
-    document.getElementById("km").value = "";
-    })
+
+/* btn reset */
+    reset.addEventListener('click', function() {
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("km").value = "";
+})
   
   
     
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-// -20% <18 anni
-// -40% >65 anni
-// output con massimo due decimali .toFixed(2)
-if(userAge < 18){
-    const priceTicketYoung = (priceTicket / 100 * 20).toFixed(2);
-    console.log(priceTicketYoung);
-    // output con massimo due decimali 
-    document.getElementById("total_price").innerHTML = (`il tuo prezzo Giovani é ${priceTicketYoung} €`);
-} else if(userAge > 65){
-    const priceTicketOld = (priceTicket / 100 * 40).toFixed(2);
-    console.log(priceTicketOld);
-    // output con massimo due decimali 
-    document.getElementById("total_price").innerHTML = (`il tuo prezzo Anziani é ${priceTicketOld} €`);
-} else{
-    // output con massimo due decimali 
-    document.getElementById("total_price").innerHTML = (`il tuo prezzo Normale é ${priceTicket} €`);
-}  
-
- */
-
-
-
-
-
-
-
-
-
-/* 
-const kmPercorsi = document.getElementById("km");
-
-function upload() {
-    document.getElementById("km").value = kmPercorsi;
-    console.log(upload())
-  }
-  console.log(kmPercorsi)
-
-
- */
